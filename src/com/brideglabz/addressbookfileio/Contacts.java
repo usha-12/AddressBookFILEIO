@@ -1,6 +1,7 @@
 package com.brideglabz.addressbookfileio;
 
 public class Contacts {
+    private int count;
     private String f_name; //first name
     private String l_name; //last name
     private String address;
@@ -85,5 +86,13 @@ public class Contacts {
                 +"\nAddress: "+address+"\nCity: "+city
                 +"\nState: "+state+"\nZip: "+zip
                 +"\nPhone number: "+ph_no+"\nEmail address: "+email;
+    }
+
+    public int getCount() {;
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }
