@@ -18,7 +18,6 @@ public class Contacts {
     public void setF_name(String f_name) {
         this.f_name = f_name;
     }
-
     public String getL_name() {
         return l_name;
     }
