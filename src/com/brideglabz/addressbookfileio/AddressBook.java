@@ -1,8 +1,5 @@
 package com.brideglabz.addressbookfileio;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 public class AddressBook {
     Scanner sc = new Scanner(System.in);
@@ -135,5 +132,8 @@ public class AddressBook {
     public void countByState(String stateSearch) {
         long count1 = contacts.stream().filter(x -> x.getCity().equalsIgnoreCase(stateSearch)).count();
         System.out.println(count1+" of persons in "+stateSearch);
+    }
+    public void sortByName() {
+        contacts = (ArrayList<Contacts>) contacts.stream().sorted(Comparator.comparing(Contacts::getF_name)).collect(Collectors.toList());
     }
 }

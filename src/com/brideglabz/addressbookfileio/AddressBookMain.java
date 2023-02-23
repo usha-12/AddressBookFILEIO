@@ -5,7 +5,7 @@ public class AddressBookMain extends AddressBook {
     public static void menu() {
         AddressBookMain addressBook = new AddressBookMain();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Menu: (Enter the respective number)\n1. Add contact 2. Edit contact 3. Delete 4. Display 5. Search by City or State 6. Count of person in city or state 7. Dictionary of person by city and state 8. Exit");
+        System.out.println("Menu: (Enter the respective number)\n1. Add contact 2. Edit contact 3. Delete 4. Display 5. Search by City or State 6. Count of person in city or state 7. Dictionary of person by city and state 8. Sort by name 9. Exit");
         option = sc.nextInt();
         switch(option) {
             case 1:
@@ -84,6 +84,9 @@ public class AddressBookMain extends AddressBook {
                 menu();
                 break;
             case 8:
+                addressBook.sortByName();
+                break;
+            case 9:
                 System.exit(0);
             default:
                 System.out.println("Invalid option");
