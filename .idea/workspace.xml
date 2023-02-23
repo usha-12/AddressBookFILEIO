@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27cf87d0-eae1-4ad8-b2ae-399a3cd13d43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/brideglabz/addressbookfileio/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbookfileio/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/brideglabz/addressbookfileio/AddressBookMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbookfileio/AddressBookMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/brideglabz/addressbookfileio/Contacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/addressbookfileio/Contacts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
