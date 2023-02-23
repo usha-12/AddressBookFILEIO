@@ -10,9 +10,6 @@ public class Contacts {
     private String ph_no; //phone number
     private String email;
 
-    public Contacts() {
-    }
-
     public String getF_name() {
         return f_name;
     }
@@ -73,7 +70,7 @@ public class Contacts {
     public void setCity(String city) {
         this.city = city;
     }
-    public Contacts(String f_name,String l_name,String address,String city,String state,String zip,String ph_no,String email) {
+    public Contacts(int count, String f_name, String l_name, String address, String city, String state, String zip, String ph_no, String email) {
         this.f_name = f_name;
         this.l_name = l_name;
         this.address = address;
