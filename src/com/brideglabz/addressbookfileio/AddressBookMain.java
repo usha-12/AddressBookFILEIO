@@ -7,6 +7,7 @@ public class AddressBookMain {
     String searchByName;
     static int option;
     static Contacts contact;
+    int count = 1;
     static ArrayList <Contacts> contacts = new ArrayList<Contacts>(); //using Arraylist as it is easier than using Array
     public void CreatingContact() {
         Scanner sc = new Scanner(System.in);
@@ -28,9 +29,10 @@ public class AddressBookMain {
         System.out.println("Enter the email address");
         String email = sc.next();
         System.out.println("Contact created");
-        contact = new Contacts(f_name,l_name,address,city,state,zip,ph_no,email);
+        contact = new Contacts(count, f_name,l_name,address,city,state,zip,ph_no,email);
     }
     public void addingContacts() {
+        count++;
         contacts.add(contact);
     }
     public void editContacts() {
@@ -123,7 +125,6 @@ public class AddressBookMain {
                 System.out.println("Invalid option");
         }
     }
-
     public static void main(String[] args) {
         System.out.println("Welcome to day 9 address book program");
         addressBook.menu();
