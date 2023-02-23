@@ -10,22 +10,18 @@ public class Contacts {
     private String zip;
     private String ph_no; //phone number
     private String email;
-
     public String getF_name() {
         return f_name;
     }
-
     public void setF_name(String f_name) {
         this.f_name = f_name;
     }
     public String getL_name() {
         return l_name;
     }
-
     public void setL_name(String l_name) {
         this.l_name = l_name;
     }
-
     public String getAddress() {
         return address;
     }
@@ -33,15 +29,12 @@ public class Contacts {
     public void setAddress(String address) {
         this.address = address;
     }
-
     public String getState() {
         return state;
     }
-
     public void setState(String state) {
         this.state = state;
     }
-
     public String getZip() {
         return zip;
     }
@@ -49,7 +42,6 @@ public class Contacts {
     public void setZip(String zip) {
         this.zip = zip;
     }
-
     public String getPh_no() {
         return ph_no;
     }
