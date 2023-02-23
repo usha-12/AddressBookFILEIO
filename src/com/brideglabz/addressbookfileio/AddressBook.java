@@ -6,7 +6,7 @@ public class AddressBook {
     String searchByName;
     static Contacts contact;
     int count = 1;
-    static ArrayList<Contacts> contacts = new ArrayList<Contacts>(); //using collection as per the requirement of uc7
+    static List<Contacts> contacts = new ArrayList<Contacts>(); //using collection as per the requirement of uc7
     static List<Contacts> duplicateCheckedContacts;
     static List<Contacts> searchByCity;
     static List<Contacts> searchByState;
@@ -46,7 +46,6 @@ public class AddressBook {
             if(contacts.equals(duplicateCheckedContacts)) {
                 System.out.println("Found a duplicate contact " + contact.getF_name()+" "+contact.getL_name() + " Already exists S.no " + contact.getCount());
             }
-            //else ther is no duplicate it will get added
             else {
                 count++;
                 contacts.add(contact);
@@ -116,7 +115,7 @@ public class AddressBook {
         return searchByState;
     }
     public void dictionaryOfPersonByCity(String cityPerson) {
-        List<Contacts> cityList = searchByCity(cityPerson); //calling uc8city list and storing in a list
+        List<Contacts> cityList = searchByCity(cityPerson); //calling city list and storing in a list
         dictionaryCity.put(cityPerson, cityList); //adding city name as key and list as value
         dictionaryCity.get(cityPerson).forEach(x -> System.out.println(x));
     }
@@ -134,6 +133,15 @@ public class AddressBook {
         System.out.println(count1+" of persons in "+stateSearch);
     }
     public void sortByName() {
-        contacts = (ArrayList<Contacts>) contacts.stream().sorted(Comparator.comparing(Contacts::getF_name)).collect(Collectors.toList());
+        contacts = contacts.stream().sorted(Comparator.comparing(Contacts::getF_name)).collect(Collectors.toList());
+    }
+    public void sortByCity() {
+        contacts = contacts.stream().sorted(Comparator.comparing(Contacts::getCity)).collect(Collectors.toList());
+    }
+    public void sortByState() {
+        contacts = contacts.stream().sorted(Comparator.comparing(Contacts::getState)).collect(Collectors.toList());
+    }
+    public void sortByZip() {
+        contacts = contacts.stream().sorted(Comparator.comparing(Contacts::getZip)).collect(Collectors.toList());
     }
 }
