@@ -44,12 +44,12 @@ public class AddressBookMain extends AddressBook {
                 if(option2 == 1) {
                     System.out.println("Enter the city name to search");
                     String citySearch = sc.next();
-                    addressBook.uc8_searchByCity(citySearch).forEach(x -> System.out.println(x));
+                    addressBook.searchByCity(citySearch).forEach(x -> System.out.println(x));
                 }
                 else if(option2 == 2) {
                     System.out.println("Enter the state name to search");
                     String stateSearch = sc.next();
-                    addressBook.uc8_searchByState(stateSearch).forEach(x -> System.out.println(x));
+                    addressBook.searchByState(stateSearch).forEach(x -> System.out.println(x));
                 }
                 menu();
                 break;
@@ -59,7 +59,7 @@ public class AddressBookMain extends AddressBook {
                 if(option3 == 1) {
                     System.out.println("Enter the city name");
                     String citySearch = sc.next();
-                    addressBook.CountByCity(citySearch);
+                    addressBook.countByCity(citySearch);
                 }
                 else if(option3 == 2) {
                     System.out.println("Enter the state name");

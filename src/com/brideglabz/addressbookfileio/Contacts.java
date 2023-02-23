@@ -86,11 +86,9 @@ public class Contacts {
                 +"\nState: "+state+"\nZip: "+zip
                 +"\nPhone number: "+ph_no+"\nEmail address: "+email;
     }
-
     public int getCount() {;
         return count;
     }
-
     public void setCount(int count) {
         this.count = count;
     }

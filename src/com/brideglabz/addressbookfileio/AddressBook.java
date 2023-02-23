@@ -110,25 +110,25 @@ public class AddressBook {
             }
         }
     }
-    public List<Contacts> uc8_searchByCity(String citySearch) {
+    public List<Contacts> searchByCity(String citySearch) {
         searchByCity = contacts.stream().filter(x -> x.getCity().equalsIgnoreCase(citySearch)).collect(Collectors.toList());
         return searchByCity;
     }
-    public List<Contacts> uc8_searchByState(String stateSearch) {
+    public List<Contacts> searchByState(String stateSearch) {
         searchByState = contacts.stream().filter(x -> x.getState().equalsIgnoreCase(stateSearch)).collect(Collectors.toList());
         return searchByState;
     }
     public void dictionaryOfPersonByCity(String cityPerson) {
-        List<Contacts> cityList = uc8_searchByCity(cityPerson); //calling uc8city list and storing in a list
+        List<Contacts> cityList = searchByCity(cityPerson); //calling uc8city list and storing in a list
         dictionaryCity.put(cityPerson, cityList); //adding city name as key and list as value
         dictionaryCity.get(cityPerson).forEach(x -> System.out.println(x));
     }
     public void dictionaryOfPersonByState(String statePerson) {
-        List<Contacts> cityList = uc8_searchByCity(statePerson);
+        List<Contacts> cityList = searchByCity(statePerson);
         dictionaryState.put(statePerson, cityList);
         dictionaryState.get(statePerson).forEach(x -> System.out.println(x));
     }
-    public void CountByCity(String citySearch) {
+    public void countByCity(String citySearch) {
         long count1 = contacts.stream().filter(x -> x.getCity().equalsIgnoreCase(citySearch)).count();
         System.out.println(count1+" of persons in "+citySearch);
     }
